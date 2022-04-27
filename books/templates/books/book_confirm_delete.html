@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Удаление записи</h1>
+
+<p>Уверены что хотите удалить: {{ book }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Да, удалить">
+  <input type="submit" value="Отмена" onclick="window.location.href='{% url 'books:all' %}';return false;">
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{% comment %} {% if form.errors %}
+  <p>Неправильно введен логин или пароль.</p>
+{% endif %} {% endcomment %}
+
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+
+{{ form|crispy }}
+
+<input type="submit" class="btn btn-primary" value="Войти" />
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
+{% endblock %}
