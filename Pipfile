@@ -8,6 +8,8 @@ django = "*"
 environs = "*"
 psycopg2 = "*"
 django-crispy-forms = "*"
+openpyxl = "*"
+django-extensions = "*"
 
 [dev-packages]
 

@@ -3,7 +3,7 @@
 <h1>Список записей</h1>
 <a href="{% url 'books:book_create' %}">Добавить новую запись</a>
 {% if book_list %}
-<table class="table table-bordered table-hover table-sm w-100 d-block d-md-table">
+<table class="table table-bordered table-hover table-sm w-100 d-block d-md-table .table-responsive">
 	<thead class="thead-dark">
 		<tr>
 			{% if user.is_staff %}
